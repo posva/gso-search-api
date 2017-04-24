@@ -1,0 +1,22 @@
+{
+  "name": "gso-search-api",
+  "version": "1.0.0",
+  "description": "Search StackOverflow questions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -w *.js index.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "google": "^2.1.0",
+    "restify": "^4.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
