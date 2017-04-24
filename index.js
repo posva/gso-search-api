@@ -8,6 +8,9 @@ const port = process.env.PORT || 4000
 const NotFoundError = restify.errors.NotFoundError
 
 const server = restify.createServer()
+// Allow requests from anywhere
+server.use(restify.CORS())
+
 server.get('/best-answer/:query', async (req, res, next) => {
   const { err, links } = await searchOnGoogle(req.params.query)
   if (err) return next(err)
